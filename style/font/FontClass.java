@@ -4,7 +4,7 @@ import javax.swing.UIManager;
 
 public class FontClass {
 	static final int FONT_SIZE = 18;
-	static final String FONT_STYLE = "΢���ź�";
+	static final String FONT_STYLE = "Î¢ÈíÑÅºÚ";
 	public static void loadIndyFont() {
 		UIManager.put("CheckBox.font", new java.awt.Font(FONT_STYLE, 0, FONT_SIZE));
 		UIManager.put("Tree.font", new java.awt.Font(FONT_STYLE, 0, FONT_SIZE));
