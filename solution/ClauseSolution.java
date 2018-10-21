@@ -1,5 +1,9 @@
 package solution;
-
+/**
+ * 算法主体仍存在部分错误，暂时没有查出
+ * @author weizhiwei <br/>
+ * 2018-10-21 10:43
+ */
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
