@@ -143,14 +143,20 @@ public class ClauseSolution {
 		Pattern p = Pattern.compile("\\(∀\\w\\)");
 		Matcher m = p.matcher(sb);
 		if(m.find()){
-			tmp.append(m.group());
-			sb.delete(m.start(), m.end());
-			m = p.matcher(sb);
+			while(true) {
+				tmp.append(m.group());
+				sb.delete(m.start(), m.end());
+				m = p.matcher(sb);
+				if(!m.find())
+					break;
+			}
 		}else{
 			return s;
 		}
-		sb.deleteCharAt(0);//消去全称量词之后别忘把最外层括号消除
-		sb.deleteCharAt(sb.length()-1);
+		if(sb.charAt(0)=='(') {
+			sb.deleteCharAt(0);//消去全称量词之后别忘把最外层括号消除
+			sb.deleteCharAt(sb.length()-1);
+		}
 		return sb.toString();
 	}
 	/**
